@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hibernate.ThoigiandkhpEntity" table="thoigiandkhp" schema="dangkihocphan">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="idKi">
+            <column name="idKi" sql-type="int"/>
+        </property>
+        <property name="ngayBatDau">
+            <column name="ngayBatDau" sql-type="date" not-null="true"/>
+        </property>
+        <property name="ngayKetThuc">
+            <column name="ngayKetThuc" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hibernate.HocphanmoEntity" table="hocphanmo" schema="dangkihocphan">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="idMonHoc">
+            <column name="idMonHoc" sql-type="int"/>
+        </property>
+        <property name="idThoiGianDkhp">
+            <column name="idThoiGianDKHP" sql-type="int"/>
+        </property>
+        <property name="maGvlt">
+            <column name="maGVLT" sql-type="char(10)" length="10" not-null="true"/>
+        </property>
+        <property name="tenHocPhan">
+            <column name="tenHocPhan" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="tenPhongHoc">
+            <column name="tenPhongHoc" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="thu">
+            <column name="thu" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="ca">
+            <column name="ca" sql-type="int" not-null="true"/>
+        </property>
+        <property name="soLuong">
+            <column name="soLuong" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

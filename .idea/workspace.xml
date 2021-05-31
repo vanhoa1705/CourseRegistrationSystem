@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54133223-3197-4a39-8f2b-ca72f9793a6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Hibernate_5_4_11_5_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseRegistrationSystem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/GiaoVuDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/SinhVienDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GiaovienEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GiaovuEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HockiEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HocphanmoEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LophocEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MonhocEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SinhvienEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SinhvienHocphanEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ThoigiandkhpEntity.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/GiaovienEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/GiaovuEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/HockiEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/HocphanmoEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/LophocEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/MonhocEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/SinhvienEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/SinhvienHocphanEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hibernate/ThoigiandkhpEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/HibernateUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="hibernate-configuration-5.2" />
+        <option value="hibernate-main-5.2" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tJAT1R8ApFIwXIUlOtLrORHsat" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="16a81722-1f68-4be4-b9d0-24baa58aaa59" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15716273" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="hibernate" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="components.Login" />
+      <module name="CourseRegistrationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="components.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="CourseRegistrationSystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dangnhap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="components.dangnhap" />
+      <module name="CourseRegistrationSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="components.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.dangnhap" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54133223-3197-4a39-8f2b-ca72f9793a6b" name="Default Changelist" comment="" />
+      <created>1622476824847</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622476824847</updated>
+      <workItem from="1622476828129" duration="5091000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
