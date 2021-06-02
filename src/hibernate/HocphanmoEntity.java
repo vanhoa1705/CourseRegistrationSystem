@@ -1,6 +1,8 @@
 package hibernate;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class HocphanmoEntity {
     private int id;
@@ -12,6 +14,25 @@ public class HocphanmoEntity {
     private String thu;
     private Integer ca;
     private Integer soLuong;
+
+    private MonhocEntity monhoc;
+    private ThoigiandkhpEntity thoigiandkhp;
+
+    public ThoigiandkhpEntity getThoigiandkhp() {
+        return thoigiandkhp;
+    }
+
+    public void setThoigiandkhp(ThoigiandkhpEntity thoigiandkhp) {
+        this.thoigiandkhp = thoigiandkhp;
+    }
+
+    public MonhocEntity getMonhoc() {
+        return monhoc;
+    }
+
+    public void setMonhoc(MonhocEntity monhoc) {
+        this.monhoc = monhoc;
+    }
 
     public int getId() {
         return id;

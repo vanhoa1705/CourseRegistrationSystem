@@ -7,6 +7,8 @@ package components;
 
 import DAO.GiaoVuDAO;
 import DAO.SinhVienDAO;
+import hibernate.GiaovuEntity;
+import hibernate.SinhvienEntity;
 
 import javax.swing.*;
 
@@ -36,7 +38,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
-        txtPassword = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,9 +108,22 @@ public class Login extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
-        boolean isLoginSV = SinhVienDAO.Login(username, password);
-        boolean isLoginGV = GiaoVuDAO.Login(username, password);
-        if(!isLoginSV && !isLoginGV){
+        SinhvienEntity isLoginSV = SinhVienDAO.Login(username, password);
+        GiaovuEntity isLoginGV = GiaoVuDAO.Login(username, password);
+
+        if(isLoginGV != null){
+            dispose();
+            Global.isGiaoVu = true;
+            Global.giaovu = isLoginGV;
+            JFrame frame = new dashboardGiaoVu();
+            frame.setTitle("Danh sách chức năng");
+            frame.setResizable(false);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        }
+
+        if(isLoginSV == null && isLoginGV == null){
             JOptionPane.showMessageDialog(null, "Sai tên đăng nhập hoặc mật khẩu!");//Tham khao tu internet
         }
     }
@@ -139,13 +154,6 @@ public class Login extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify
@@ -153,7 +161,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration
 }

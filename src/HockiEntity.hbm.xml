@@ -12,13 +12,16 @@
             <column name="tenHocKi" sql-type="char(10)" length="10" not-null="true"/>
         </property>
         <property name="namHoc">
-            <column name="namHoc" sql-type="int" not-null="true"/>
+            <column name="namHoc" sql-type="char(4)" not-null="true"/>
         </property>
         <property name="ngayBatDau">
             <column name="ngayBatDau" sql-type="date" not-null="true"/>
         </property>
         <property name="ngayKetThuc">
             <column name="ngayKetThuc" sql-type="date" not-null="true"/>
+        </property>
+        <property name="isCurrent">
+            <column name="isCurrent" sql-type="tinyint(1)" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

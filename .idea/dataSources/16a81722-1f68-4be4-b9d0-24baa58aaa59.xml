@@ -977,144 +977,143 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Plugin>caching_sha2_password</Plugin>
     </user>
     <table id="285" parent="2" name="giaovien"/>
-    <table id="286" parent="2" name="giaovu"/>
-    <table id="287" parent="2" name="hocki"/>
-    <table id="288" parent="2" name="hocphanmo"/>
-    <table id="289" parent="2" name="lophoc"/>
-    <table id="290" parent="2" name="monhoc"/>
-    <table id="291" parent="2" name="sinhvien"/>
-    <table id="292" parent="2" name="sinhvien_hocphan"/>
-    <table id="293" parent="2" name="thoigiandkhp"/>
-    <column id="294" parent="285" name="id">
+    <table id="286" parent="2" name="giaovienmonhoc"/>
+    <table id="287" parent="2" name="giaovu"/>
+    <table id="288" parent="2" name="hocki"/>
+    <table id="289" parent="2" name="hocphanmo"/>
+    <table id="290" parent="2" name="lophoc"/>
+    <table id="291" parent="2" name="monhoc"/>
+    <table id="292" parent="2" name="sinhvien"/>
+    <table id="293" parent="2" name="sinhvien_hocphan"/>
+    <table id="294" parent="2" name="thoigiandkhp"/>
+    <column id="295" parent="285" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="295" parent="285" name="maGiaoVien">
+    <column id="296" parent="285" name="maGiaoVien">
       <Position>2</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="296" parent="285" name="tenGiaoVien">
+    <column id="297" parent="285" name="tenGiaoVien">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="297" parent="285" name="gioiTinh">
+    <column id="298" parent="285" name="gioiTinh">
       <Position>4</Position>
       <DataType>varchar(5)|0s</DataType>
     </column>
-    <column id="298" parent="285" name="ngaySinh">
+    <column id="299" parent="285" name="ngaySinh">
       <Position>5</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="299" parent="285" name="diaChi">
+    <column id="300" parent="285" name="diaChi">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
-    </column>
-    <column id="300" parent="285" name="idMonHoc">
-      <Position>7</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <index id="301" parent="285" name="maGiaoVien">
       <ColNames>maGiaoVien</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="302" parent="285" name="FK_GV_MH">
-      <ColNames>idMonHoc</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="303" parent="285" name="PRIMARY">
+    <key id="302" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="304" parent="285" name="maGiaoVien">
+    <key id="303" parent="285" name="maGiaoVien">
       <ColNames>maGiaoVien</ColNames>
       <UnderlyingIndexName>maGiaoVien</UnderlyingIndexName>
     </key>
-    <foreign-key id="305" parent="285" name="FK_GV_MH">
-      <ColNames>idMonHoc</ColNames>
-      <RefTableName>monhoc</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="306" parent="286" name="id">
+    <column id="304" parent="286" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="307" parent="286" name="maGiaoVu">
+    <column id="305" parent="286" name="id_giao_vien">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="306" parent="286" name="id_mon_hoc">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="307" parent="286" name="FK_GVMH_GV">
+      <ColNames>id_giao_vien</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="308" parent="286" name="FK_GVMH_MH">
+      <ColNames>id_mon_hoc</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="309" parent="286" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="310" parent="286" name="FK_GVMH_GV">
+      <ColNames>id_giao_vien</ColNames>
+      <RefTableName>giaovien</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="311" parent="286" name="FK_GVMH_MH">
+      <ColNames>id_mon_hoc</ColNames>
+      <RefTableName>monhoc</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="312" parent="287" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="313" parent="287" name="maGiaoVu">
       <Position>2</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="308" parent="286" name="tenGiaoVu">
+    <column id="314" parent="287" name="tenGiaoVu">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="309" parent="286" name="gioiTinh">
+    <column id="315" parent="287" name="gioiTinh">
       <Position>4</Position>
       <DataType>varchar(5)|0s</DataType>
     </column>
-    <column id="310" parent="286" name="ngaySinh">
+    <column id="316" parent="287" name="ngaySinh">
       <Position>5</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="311" parent="286" name="diaChi">
+    <column id="317" parent="287" name="diaChi">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="312" parent="286" name="taiKhoan">
+    <column id="318" parent="287" name="taiKhoan">
       <Position>7</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="313" parent="286" name="matKhau">
+    <column id="319" parent="287" name="matKhau">
       <Position>8</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <index id="314" parent="286" name="taiKhoan">
+    <index id="320" parent="287" name="taiKhoan">
       <ColNames>taiKhoan
 maGiaoVu</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="315" parent="286" name="PRIMARY">
+    <key id="321" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="316" parent="286" name="taiKhoan">
+    <key id="322" parent="287" name="taiKhoan">
       <ColNames>taiKhoan
 maGiaoVu</ColNames>
       <UnderlyingIndexName>taiKhoan</UnderlyingIndexName>
-    </key>
-    <column id="317" parent="287" name="id">
-      <Position>1</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
-    </column>
-    <column id="318" parent="287" name="tenHocKi">
-      <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
-    </column>
-    <column id="319" parent="287" name="namHoc">
-      <Position>3</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="320" parent="287" name="ngayBatDau">
-      <Position>4</Position>
-      <DataType>date|0s</DataType>
-    </column>
-    <column id="321" parent="287" name="ngayKetThuc">
-      <Position>5</Position>
-      <DataType>date|0s</DataType>
-    </column>
-    <key id="322" parent="287" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
     </key>
     <column id="323" parent="288" name="id">
       <Position>1</Position>
@@ -1122,254 +1121,287 @@ maGiaoVu</ColNames>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="324" parent="288" name="idMonHoc">
+    <column id="324" parent="288" name="tenHocKi">
       <Position>2</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="325" parent="288" name="idThoiGianDKHP">
-      <Position>3</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="326" parent="288" name="maGVLT">
-      <Position>4</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="327" parent="288" name="tenHocPhan">
+    <column id="325" parent="288" name="namHoc">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="326" parent="288" name="ngayBatDau">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="327" parent="288" name="ngayKetThuc">
       <Position>5</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>date|0s</DataType>
     </column>
-    <column id="328" parent="288" name="tenPhongHoc">
+    <column id="328" parent="288" name="isCurrent">
       <Position>6</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="329" parent="288" name="thu">
-      <Position>7</Position>
-      <DataType>varchar(10)|0s</DataType>
-    </column>
-    <column id="330" parent="288" name="ca">
-      <Position>8</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="331" parent="288" name="soLuong">
-      <Position>9</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <index id="332" parent="288" name="FK_HP_MH">
-      <ColNames>idMonHoc</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="333" parent="288" name="FK_HP_TGDKHP">
-      <ColNames>idThoiGianDKHP</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="334" parent="288" name="PRIMARY">
+    <key id="329" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="335" parent="288" name="FK_HP_MH">
-      <ColNames>idMonHoc</ColNames>
-      <RefTableName>monhoc</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="336" parent="288" name="FK_HP_TGDKHP">
-      <ColNames>idThoiGianDKHP</ColNames>
-      <RefTableName>thoigiandkhp</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="337" parent="289" name="id">
+    <column id="330" parent="289" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="338" parent="289" name="maLop">
+    <column id="331" parent="289" name="idMonHoc">
       <Position>2</Position>
-      <DataType>char(10)|0s</DataType>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="339" parent="289" name="tenLop">
+    <column id="332" parent="289" name="idThoiGianDKHP">
       <Position>3</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="340" parent="289" name="maGVCN">
+    <column id="333" parent="289" name="maGVLT">
       <Position>4</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <index id="341" parent="289" name="maGVCN">
-      <ColNames>maGVCN</ColNames>
-      <Unique>1</Unique>
+    <column id="334" parent="289" name="tenHocPhan">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="335" parent="289" name="tenPhongHoc">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="336" parent="289" name="thu">
+      <Position>7</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="337" parent="289" name="ca">
+      <Position>8</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="338" parent="289" name="soLuong">
+      <Position>9</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <index id="339" parent="289" name="FK_HP_MH">
+      <ColNames>idMonHoc</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="342" parent="289" name="PRIMARY">
+    <index id="340" parent="289" name="FK_HP_TGDKHP">
+      <ColNames>idThoiGianDKHP</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="341" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="343" parent="289" name="maGVCN">
-      <ColNames>maGVCN</ColNames>
-      <UnderlyingIndexName>maGVCN</UnderlyingIndexName>
-    </key>
+    <foreign-key id="342" parent="289" name="FK_HP_MH">
+      <ColNames>idMonHoc</ColNames>
+      <RefTableName>monhoc</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="343" parent="289" name="FK_HP_TGDKHP">
+      <ColNames>idThoiGianDKHP</ColNames>
+      <RefTableName>thoigiandkhp</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
     <column id="344" parent="290" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="345" parent="290" name="maMonHoc">
+    <column id="345" parent="290" name="maLop">
       <Position>2</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="346" parent="290" name="tenMonHoc">
+    <column id="346" parent="290" name="tenLop">
       <Position>3</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>varchar(10)|0s</DataType>
     </column>
-    <column id="347" parent="290" name="soTinChi">
+    <column id="347" parent="290" name="maGVCN">
       <Position>4</Position>
-      <DataType>int|0s</DataType>
+      <DataType>char(10)|0s</DataType>
     </column>
-    <key id="348" parent="290" name="PRIMARY">
+    <index id="348" parent="290" name="maGVCN">
+      <ColNames>maGVCN</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="349" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="349" parent="291" name="id">
+    <key id="350" parent="290" name="maGVCN">
+      <ColNames>maGVCN</ColNames>
+      <UnderlyingIndexName>maGVCN</UnderlyingIndexName>
+    </key>
+    <column id="351" parent="291" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="350" parent="291" name="maSinhVien">
+    <column id="352" parent="291" name="maMonHoc">
       <Position>2</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="351" parent="291" name="tenSinhVien">
+    <column id="353" parent="291" name="tenMonHoc">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="352" parent="291" name="gioiTinh">
+    <column id="354" parent="291" name="soTinChi">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <key id="355" parent="291" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="356" parent="292" name="id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="357" parent="292" name="maSinhVien">
+      <Position>2</Position>
+      <DataType>char(10)|0s</DataType>
+    </column>
+    <column id="358" parent="292" name="tenSinhVien">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <column id="359" parent="292" name="gioiTinh">
       <Position>4</Position>
       <DataType>varchar(5)|0s</DataType>
     </column>
-    <column id="353" parent="291" name="ngaySinh">
+    <column id="360" parent="292" name="ngaySinh">
       <Position>5</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="354" parent="291" name="diaChi">
+    <column id="361" parent="292" name="diaChi">
       <Position>6</Position>
       <DataType>varchar(50)|0s</DataType>
     </column>
-    <column id="355" parent="291" name="idLop">
+    <column id="362" parent="292" name="idLop">
       <Position>7</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="356" parent="291" name="taiKhoan">
+    <column id="363" parent="292" name="taiKhoan">
       <Position>8</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <column id="357" parent="291" name="matKhau">
+    <column id="364" parent="292" name="matKhau">
       <Position>9</Position>
       <DataType>char(10)|0s</DataType>
     </column>
-    <index id="358" parent="291" name="taiKhoan">
+    <index id="365" parent="292" name="taiKhoan">
       <ColNames>taiKhoan
 maSinhVien</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="359" parent="291" name="FK_SV_LOP">
+    <index id="366" parent="292" name="FK_SV_LOP">
       <ColNames>idLop</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="360" parent="291" name="PRIMARY">
+    <key id="367" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="361" parent="291" name="taiKhoan">
+    <key id="368" parent="292" name="taiKhoan">
       <ColNames>taiKhoan
 maSinhVien</ColNames>
       <UnderlyingIndexName>taiKhoan</UnderlyingIndexName>
     </key>
-    <foreign-key id="362" parent="291" name="FK_SV_LOP">
+    <foreign-key id="369" parent="292" name="FK_SV_LOP">
       <ColNames>idLop</ColNames>
       <RefTableName>lophoc</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="363" parent="292" name="id">
+    <column id="370" parent="293" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="364" parent="292" name="idSinhVien">
+    <column id="371" parent="293" name="idSinhVien">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="365" parent="292" name="idHocPhanMo">
+    <column id="372" parent="293" name="idHocPhanMo">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="366" parent="292" name="ngayDangKi">
+    <column id="373" parent="293" name="ngayDangKi">
       <Position>4</Position>
       <DataType>date|0s</DataType>
     </column>
-    <index id="367" parent="292" name="FK_SV_HP">
+    <index id="374" parent="293" name="FK_SV_HP">
       <ColNames>idSinhVien</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="368" parent="292" name="FK_HP_SV">
+    <index id="375" parent="293" name="FK_HP_SV">
       <ColNames>idHocPhanMo</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="369" parent="292" name="PRIMARY">
+    <key id="376" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="370" parent="292" name="FK_SV_HP">
+    <foreign-key id="377" parent="293" name="FK_SV_HP">
       <ColNames>idSinhVien</ColNames>
       <RefTableName>sinhvien</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="371" parent="292" name="FK_HP_SV">
+    <foreign-key id="378" parent="293" name="FK_HP_SV">
       <ColNames>idHocPhanMo</ColNames>
       <RefTableName>hocphanmo</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="372" parent="293" name="id">
+    <column id="379" parent="294" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="373" parent="293" name="idKi">
+    <column id="380" parent="294" name="idKi">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="374" parent="293" name="ngayBatDau">
+    <column id="381" parent="294" name="ngayBatDau">
       <Position>3</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="375" parent="293" name="ngayKetThuc">
+    <column id="382" parent="294" name="ngayKetThuc">
       <Position>4</Position>
       <DataType>date|0s</DataType>
     </column>
-    <index id="376" parent="293" name="FK_TGDKHP_HK">
+    <index id="383" parent="294" name="FK_TGDKHP_HK">
       <ColNames>idKi</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="377" parent="293" name="PRIMARY">
+    <key id="384" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="378" parent="293" name="FK_TGDKHP_HK">
+    <foreign-key id="385" parent="294" name="FK_TGDKHP_HK">
       <ColNames>idKi</ColNames>
       <RefTableName>hocki</RefTableName>
       <RefColNames>id</RefColNames>

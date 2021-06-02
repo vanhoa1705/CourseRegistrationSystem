@@ -8,12 +8,6 @@
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
-        <property name="idMonHoc">
-            <column name="idMonHoc" sql-type="int"/>
-        </property>
-        <property name="idThoiGianDkhp">
-            <column name="idThoiGianDKHP" sql-type="int"/>
-        </property>
         <property name="maGvlt">
             <column name="maGVLT" sql-type="char(10)" length="10" not-null="true"/>
         </property>
@@ -32,5 +26,9 @@
         <property name="soLuong">
             <column name="soLuong" sql-type="int" not-null="true"/>
         </property>
+
+        <many-to-one name="thoigiandkhp" class="hibernate.ThoigiandkhpEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="idThoiGianDKHP" not-null="true"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>

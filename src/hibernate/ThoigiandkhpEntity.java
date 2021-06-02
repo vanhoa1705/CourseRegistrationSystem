@@ -1,13 +1,25 @@
 package hibernate;
 
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class ThoigiandkhpEntity {
     private int id;
     private int idKi;
     private Date ngayBatDau;
     private Date ngayKetThuc;
+
+    private Set<HocphanmoEntity> hocphanmoSet = new HashSet<HocphanmoEntity>(0);
+
+    public Set<HocphanmoEntity> getHocphanmoSet() {
+        return hocphanmoSet;
+    }
+
+    public void setHocphanmoSet(Set<HocphanmoEntity> hocphanmoSet) {
+        this.hocphanmoSet = hocphanmoSet;
+    }
 
     public int getId() {
         return id;

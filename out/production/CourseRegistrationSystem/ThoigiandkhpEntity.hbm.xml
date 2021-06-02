@@ -17,5 +17,12 @@
         <property name="ngayKetThuc">
             <column name="ngayKetThuc" sql-type="date" not-null="true"/>
         </property>
+
+        <set name="hocphanmoSet">
+            <key>
+                <column name="idMonHoc"/>
+            </key>
+            <one-to-many class="hibernate.HocphanmoEntity"/>
+        </set>
     </class>
 </hibernate-mapping>

@@ -27,33 +27,170 @@ public class LoginFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        btnDSGiaoVu = new javax.swing.JButton();
+        btnQuanLyMonHoc = new javax.swing.JButton();
+        btnQuanLyHocKi = new javax.swing.JButton();
+        btnQuanLyLopHoc = new javax.swing.JButton();
+        btnQuanLyThoiGianDangKi = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        account = new javax.swing.JMenu();
+        menuAccount = new javax.swing.JMenuItem();
+        menuChangPass = new javax.swing.JMenuItem();
+        menuLogout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Đăng nhập");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel2.setText("Danh sách chức năng");
+
+        btnDSGiaoVu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnDSGiaoVu.setText("Danh sách giáo vụ");
+        btnDSGiaoVu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDSGiaoVuActionPerformed(evt);
+            }
+        });
+
+        btnQuanLyMonHoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuanLyMonHoc.setText("Quản lý môn học");
+        btnQuanLyMonHoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuanLyMonHocActionPerformed(evt);
+            }
+        });
+
+        btnQuanLyHocKi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuanLyHocKi.setText("Quản lý học kì");
+        btnQuanLyHocKi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuanLyHocKiActionPerformed(evt);
+            }
+        });
+
+        btnQuanLyLopHoc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuanLyLopHoc.setText("Quản lý lớp học");
+        btnQuanLyLopHoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuanLyLopHocActionPerformed(evt);
+            }
+        });
+
+        btnQuanLyThoiGianDangKi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuanLyThoiGianDangKi.setText("Quản lý thời gian đăng kí");
+        btnQuanLyThoiGianDangKi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuanLyThoiGianDangKiActionPerformed(evt);
+            }
+        });
+
+        account.setText("Tài khoản");
+
+        menuAccount.setText("Thông tin tài khoản");
+        menuAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuAccountActionPerformed(evt);
+            }
+        });
+        account.add(menuAccount);
+
+        menuChangPass.setText("Thay đổi mật khẩu");
+        menuChangPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuChangPassActionPerformed(evt);
+            }
+        });
+        account.add(menuChangPass);
+
+        menuLogout.setText("Đăng xuất");
+        menuLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuLogoutActionPerformed(evt);
+            }
+        });
+        account.add(menuLogout);
+
+        jMenuBar1.add(account);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(jLabel1)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnQuanLyThoiGianDangKi))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnQuanLyMonHoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDSGiaoVu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(63, 63, 63)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnQuanLyLopHoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnQuanLyHocKi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(134, 134, 134))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDSGiaoVu)
+                    .addComponent(btnQuanLyHocKi))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnQuanLyMonHoc)
+                    .addComponent(btnQuanLyLopHoc))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnQuanLyThoiGianDangKi)
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDSGiaoVuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDSGiaoVuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDSGiaoVuActionPerformed
+
+    private void btnQuanLyMonHocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyMonHocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnQuanLyMonHocActionPerformed
+
+    private void btnQuanLyHocKiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyHocKiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnQuanLyHocKiActionPerformed
+
+    private void btnQuanLyLopHocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyLopHocActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnQuanLyLopHocActionPerformed
+
+    private void btnQuanLyThoiGianDangKiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuanLyThoiGianDangKiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnQuanLyThoiGianDangKiActionPerformed
+
+    private void menuAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAccountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuAccountActionPerformed
+
+    private void menuChangPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuChangPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuChangPassActionPerformed
+
+    private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menuLogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,6 +228,16 @@ public class LoginFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu account;
+    private javax.swing.JButton btnDSGiaoVu;
+    private javax.swing.JButton btnQuanLyHocKi;
+    private javax.swing.JButton btnQuanLyLopHoc;
+    private javax.swing.JButton btnQuanLyMonHoc;
+    private javax.swing.JButton btnQuanLyThoiGianDangKi;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem menuAccount;
+    private javax.swing.JMenuItem menuChangPass;
+    private javax.swing.JMenuItem menuLogout;
     // End of variables declaration//GEN-END:variables
 }

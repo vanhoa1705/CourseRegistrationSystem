@@ -89,4 +89,18 @@ public class GiaovuEntity {
     public int hashCode() {
         return Objects.hash(id, maGiaoVu, tenGiaoVu, gioiTinh, ngaySinh, diaChi, taiKhoan, matKhau);
     }
+
+    @Override
+    public String toString() {
+        return "GiaovuEntity{" +
+                "id=" + id +
+                ", maGiaoVu='" + maGiaoVu + '\'' +
+                ", tenGiaoVu='" + tenGiaoVu + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
+                ", ngaySinh=" + ngaySinh +
+                ", diaChi='" + diaChi + '\'' +
+                ", taiKhoan='" + taiKhoan + '\'' +
+                ", matKhau='" + matKhau + '\'' +
+                '}';
+    }
 }

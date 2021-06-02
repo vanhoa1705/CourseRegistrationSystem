@@ -31,7 +31,7 @@ public class SinhVienDAO {
         return sinhvien;
     }
 
-    public static boolean Login(String username, String password){
+    public static SinhvienEntity Login(String username, String password){
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<SinhvienEntity> sinhvien = null;
 
@@ -43,7 +43,7 @@ public class SinhVienDAO {
 
             sinhvien = query.list();
             if(sinhvien.size() != 0){
-                return true;
+                return sinhvien.get(0);
             }
 
         }catch (HibernateException e){
@@ -52,6 +52,6 @@ public class SinhVienDAO {
             session.close();
         }
 
-        return false;
+        return null;
     }
 }

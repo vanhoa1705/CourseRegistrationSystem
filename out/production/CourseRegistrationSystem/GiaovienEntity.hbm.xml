@@ -23,8 +23,5 @@
         <property name="diaChi">
             <column name="diaChi" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
-        <property name="idMonHoc">
-            <column name="idMonHoc" sql-type="int"/>
-        </property>
     </class>
 </hibernate-mapping>

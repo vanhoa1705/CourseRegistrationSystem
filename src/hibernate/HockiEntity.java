@@ -6,9 +6,10 @@ import java.util.Objects;
 public class HockiEntity {
     private int id;
     private String tenHocKi;
-    private Integer namHoc;
+    private String namHoc;
     private Date ngayBatDau;
     private Date ngayKetThuc;
+    private boolean isCurrent;
 
     public int getId() {
         return id;
@@ -26,11 +27,11 @@ public class HockiEntity {
         this.tenHocKi = tenHocKi;
     }
 
-    public Integer getNamHoc() {
+    public String getNamHoc() {
         return namHoc;
     }
 
-    public void setNamHoc(Integer namHoc) {
+    public void setNamHoc(String namHoc) {
         this.namHoc = namHoc;
     }
 
@@ -50,16 +51,24 @@ public class HockiEntity {
         this.ngayKetThuc = ngayKetThuc;
     }
 
+    public boolean getIsCurrent() {
+        return isCurrent;
+    }
+
+    public void setIsCurrent(boolean current) {
+        isCurrent = current;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HockiEntity that = (HockiEntity) o;
-        return id == that.id && Objects.equals(tenHocKi, that.tenHocKi) && Objects.equals(namHoc, that.namHoc) && Objects.equals(ngayBatDau, that.ngayBatDau) && Objects.equals(ngayKetThuc, that.ngayKetThuc);
+        return id == that.id && Objects.equals(tenHocKi, that.tenHocKi) && Objects.equals(namHoc, that.namHoc) && Objects.equals(ngayBatDau, that.ngayBatDau) && Objects.equals(ngayKetThuc, that.ngayKetThuc) && (isCurrent == that.isCurrent);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, tenHocKi, namHoc, ngayBatDau, ngayKetThuc);
+        return Objects.hash(id, tenHocKi, namHoc, ngayBatDau, ngayKetThuc, isCurrent);
     }
 }
