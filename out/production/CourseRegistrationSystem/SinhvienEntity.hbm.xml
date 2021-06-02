@@ -23,14 +23,20 @@
         <property name="diaChi">
             <column name="diaChi" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
-        <property name="idLop">
-            <column name="idLop" sql-type="int"/>
-        </property>
         <property name="taiKhoan">
             <column name="taiKhoan" sql-type="char(10)" length="10" not-null="true"/>
         </property>
         <property name="matKhau">
             <column name="matKhau" sql-type="char(10)" length="10" not-null="true"/>
         </property>
+
+        <many-to-one name="lophoc" class="hibernate.LophocEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="idLop" not-null="true"/>
+        </many-to-one>
+
+        <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
+            <key column="idHocPhanMo" />
+            <one-to-many class="hibernate.SinhvienHocphanEntity" />
+        </set>
     </class>
 </hibernate-mapping>

@@ -9,6 +9,25 @@ public class SinhvienHocphanEntity {
     private int idHocPhanMo;
     private Date ngayDangKi;
 
+    private HocphanmoEntity hocphanmo;
+    private SinhvienEntity sinhvien;
+
+    public SinhvienEntity getSinhvien() {
+        return sinhvien;
+    }
+
+    public void setSinhvien(SinhvienEntity sinhvien) {
+        this.sinhvien = sinhvien;
+    }
+
+    public HocphanmoEntity getHocphanmo() {
+        return hocphanmo;
+    }
+
+    public void setHocphanmo(HocphanmoEntity hocphanmo) {
+        this.hocphanmo = hocphanmo;
+    }
+
     public int getId() {
         return id;
     }

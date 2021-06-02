@@ -1,12 +1,24 @@
 package hibernate;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class LophocEntity {
     private int id;
     private String maLop;
     private String tenLop;
     private String maGvcn;
+
+    Set<SinhvienEntity> sinhvienSet = new HashSet<SinhvienEntity>(0);
+
+    public Set<SinhvienEntity> getSinhvienSet() {
+        return sinhvienSet;
+    }
+
+    public void setSinhvienSet(Set<SinhvienEntity> sinhvienSet) {
+        this.sinhvienSet = sinhvienSet;
+    }
 
     public int getId() {
         return id;

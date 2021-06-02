@@ -17,12 +17,17 @@
         <property name="soTinChi">
             <column name="soTinChi" sql-type="int" not-null="true"/>
         </property>
-        
+
         <set name="hocphanmoSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
             <key>
                 <column name="idMonHoc"/>
             </key>
             <one-to-many class="hibernate.HocphanmoEntity"/>
+        </set>
+
+        <set name="giaovienMonHocSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
+            <key column="id_mon_hoc" />
+            <one-to-many class="hibernate.GiaovienMonHocEntity" />
         </set>
     </class>
 </hibernate-mapping>

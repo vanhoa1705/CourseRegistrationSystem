@@ -1,7 +1,9 @@
 package hibernate;
 
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class GiaovienEntity {
     private int id;
@@ -11,6 +13,16 @@ public class GiaovienEntity {
     private Date ngaySinh;
     private String diaChi;
     private int idMonHoc;
+
+    private Set<GiaovienMonHocEntity> giaovienMonHocSet = new HashSet<GiaovienMonHocEntity>(0);
+
+    public Set<GiaovienMonHocEntity> getGiaovienMonHocSet() {
+        return giaovienMonHocSet;
+    }
+
+    public void setGiaovienMonHocSet(Set<GiaovienMonHocEntity> giaovienMonHocSet) {
+        this.giaovienMonHocSet = giaovienMonHocSet;
+    }
 
     public int getId() {
         return id;

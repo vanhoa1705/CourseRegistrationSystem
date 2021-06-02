@@ -23,5 +23,10 @@
         <property name="diaChi">
             <column name="diaChi" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
+
+        <set name="giaovienMonHocSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
+            <key column="id_mon_hoc" />
+            <one-to-many class="hibernate.GiaovienMonHocEntity" />
+        </set>
     </class>
 </hibernate-mapping>

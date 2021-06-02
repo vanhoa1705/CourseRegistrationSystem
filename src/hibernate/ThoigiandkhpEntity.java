@@ -11,7 +11,16 @@ public class ThoigiandkhpEntity {
     private Date ngayBatDau;
     private Date ngayKetThuc;
 
+    private HockiEntity hocKi;
     private Set<HocphanmoEntity> hocphanmoSet = new HashSet<HocphanmoEntity>(0);
+
+    public HockiEntity getHocKi() {
+        return hocKi;
+    }
+
+    public void setHocKi(HockiEntity hocKi) {
+        this.hocKi = hocKi;
+    }
 
     public Set<HocphanmoEntity> getHocphanmoSet() {
         return hocphanmoSet;

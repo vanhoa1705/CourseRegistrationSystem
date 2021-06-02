@@ -11,6 +11,7 @@
         <property name="show_sql">true</property>
         <mapping resource="GiaovienEntity.hbm.xml"/>
         <mapping resource="GiaovuEntity.hbm.xml"/>
+        <mapping resource="GiaovienMocHocEntity.hbm.xml"/>
         <mapping resource="HockiEntity.hbm.xml"/>
         <mapping resource="HocphanmoEntity.hbm.xml"/>
         <mapping resource="LophocEntity.hbm.xml"/>

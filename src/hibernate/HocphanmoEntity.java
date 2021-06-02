@@ -18,6 +18,16 @@ public class HocphanmoEntity {
     private MonhocEntity monhoc;
     private ThoigiandkhpEntity thoigiandkhp;
 
+    public Set<SinhvienHocphanEntity> getSinhvienHocphanSet() {
+        return sinhvienHocphanSet;
+    }
+
+    public void setSinhvienHocphanSet(Set<SinhvienHocphanEntity> sinhvienHocphanSet) {
+        this.sinhvienHocphanSet = sinhvienHocphanSet;
+    }
+
+    private Set<SinhvienHocphanEntity> sinhvienHocphanSet = new HashSet<SinhvienHocphanEntity>(0);
+
     public ThoigiandkhpEntity getThoigiandkhp() {
         return thoigiandkhp;
     }

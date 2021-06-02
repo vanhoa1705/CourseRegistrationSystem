@@ -1,7 +1,9 @@
 package hibernate;
 
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class HockiEntity {
     private int id;
@@ -10,6 +12,24 @@ public class HockiEntity {
     private Date ngayBatDau;
     private Date ngayKetThuc;
     private boolean isCurrent;
+
+    private Set<ThoigiandkhpEntity> thoigiandkhpSet = new HashSet<ThoigiandkhpEntity>(0);
+
+    public Set<ThoigiandkhpEntity> getThoigiandkhpSet() {
+        return thoigiandkhpSet;
+    }
+
+    public void setThoigiandkhpSet(Set<ThoigiandkhpEntity> thoigiandkhpSet) {
+        this.thoigiandkhpSet = thoigiandkhpSet;
+    }
+
+    public boolean isCurrent() {
+        return isCurrent;
+    }
+
+    public void setCurrent(boolean current) {
+        isCurrent = current;
+    }
 
     public int getId() {
         return id;

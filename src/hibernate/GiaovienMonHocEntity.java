@@ -7,6 +7,24 @@ public class GiaovienMonHocEntity {
     private int id;
     private int id_giao_vien;
     private int id_mon_hoc;
+    private MonhocEntity monhoc;
+    private GiaovienEntity giaovien;
+
+    public GiaovienEntity getGiaovien() {
+        return giaovien;
+    }
+
+    public void setGiaovien(GiaovienEntity giaovien) {
+        this.giaovien = giaovien;
+    }
+
+    public MonhocEntity getMonhoc() {
+        return monhoc;
+    }
+
+    public void setMonhoc(MonhocEntity monhoc) {
+        this.monhoc = monhoc;
+    }
 
     public int getId() {
         return id;

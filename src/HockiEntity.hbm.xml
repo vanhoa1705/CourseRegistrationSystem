@@ -23,5 +23,12 @@
         <property name="isCurrent">
             <column name="isCurrent" sql-type="tinyint(1)" not-null="true"/>
         </property>
+
+        <set name="thoigiandkhpSet">
+            <key>
+                <column name="idKi"/>
+            </key>
+            <one-to-many class="hibernate.ThoigiandkhpEntity"/>
+        </set>
     </class>
 </hibernate-mapping>

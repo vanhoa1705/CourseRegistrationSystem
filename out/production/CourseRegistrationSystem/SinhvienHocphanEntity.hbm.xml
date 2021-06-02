@@ -8,14 +8,16 @@
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
-        <property name="idSinhVien">
-            <column name="idSinhVien" sql-type="int"/>
-        </property>
-        <property name="idHocPhanMo">
-            <column name="idHocPhanMo" sql-type="int"/>
-        </property>
         <property name="ngayDangKi">
             <column name="ngayDangKi" sql-type="date" not-null="true"/>
         </property>
+
+        <many-to-one name="sinhvien" class="hibernate.SinhvienEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="idSinhVien" not-null="true"/>
+        </many-to-one>
+
+        <many-to-one name="hocphanmo" class="hibernate.HocphanmoEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="idHocPhanMo" not-null="true"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>

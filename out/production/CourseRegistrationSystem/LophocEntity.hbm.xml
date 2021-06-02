@@ -17,5 +17,10 @@
         <property name="maGvcn">
             <column name="maGVCN" sql-type="char(10)" length="10" not-null="true"/>
         </property>
+
+        <set name="sinhvienSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
+            <key column="idLop" />
+            <one-to-many class="hibernate.SinhvienEntity" />
+        </set>
     </class>
 </hibernate-mapping>

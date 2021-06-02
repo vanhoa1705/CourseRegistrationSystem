@@ -11,6 +11,15 @@ public class MonhocEntity {
     private Integer soTinChi;
 
     private Set<HocphanmoEntity> hocphanmoSet = new HashSet<HocphanmoEntity>(0);
+    private Set<GiaovienMonHocEntity> giaovienMonHocSet = new HashSet<GiaovienMonHocEntity>(0);
+
+    public Set<GiaovienMonHocEntity> getGiaovienMonHocSet() {
+        return giaovienMonHocSet;
+    }
+
+    public void setGiaovienMonHocSet(Set<GiaovienMonHocEntity> giaovienMonHocSet) {
+        this.giaovienMonHocSet = giaovienMonHocSet;
+    }
 
     public Set<HocphanmoEntity> getHocphanmoSet() {
         return hocphanmoSet;

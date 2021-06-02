@@ -8,11 +8,13 @@
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
-        <property name="id_giao_vien">
-            <column name="id_giao_vien" sql-type="int" not-null="true"/>
-        </property>
-        <property name="id_mon_hoc">
-            <column name="id_giao_vien" sql-type="int" not-null="true"/>
-        </property>
+
+        <many-to-one name="giaovien" class="hibernate.GiaovienEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="id_giao_vien" not-null="true"/>
+        </many-to-one>
+
+        <many-to-one name="monhoc" class="hibernate.MonhocEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="id_mon_hoc" not-null="true"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>

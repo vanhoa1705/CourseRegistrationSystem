@@ -8,15 +8,16 @@
         <id name="id">
             <column name="id" sql-type="int"/>
         </id>
-        <property name="idKi">
-            <column name="idKi" sql-type="int"/>
-        </property>
         <property name="ngayBatDau">
             <column name="ngayBatDau" sql-type="date" not-null="true"/>
         </property>
         <property name="ngayKetThuc">
             <column name="ngayKetThuc" sql-type="date" not-null="true"/>
         </property>
+
+        <many-to-one name="hocKi" class="hibernate.HockiEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="idKi" not-null="true"/>
+        </many-to-one>
 
         <set name="hocphanmoSet">
             <key>
