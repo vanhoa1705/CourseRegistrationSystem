@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="hibernate.GiaovienEntity" table="giaovien" schema="dangkihocphan">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="maGiaoVien">
+            <column name="maGiaoVien" sql-type="char(10)" length="10" not-null="true"/>
+        </property>
+        <property name="tenGiaoVien">
+            <column name="tenGiaoVien" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="gioiTinh">
+            <column name="gioiTinh" sql-type="varchar(5)" length="5" not-null="true"/>
+        </property>
+        <property name="ngaySinh">
+            <column name="ngaySinh" sql-type="date" not-null="true"/>
+        </property>
+        <property name="diaChi">
+            <column name="diaChi" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
