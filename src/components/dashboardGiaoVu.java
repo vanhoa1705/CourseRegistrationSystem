@@ -32,6 +32,7 @@ public class dashboardGiaoVu extends javax.swing.JFrame {
         btnQuanLyHocKi = new javax.swing.JButton();
         btnQuanLyLopHoc = new javax.swing.JButton();
         btnQuanLyThoiGianDangKi = new javax.swing.JButton();
+        btnQuanLyHocPhan = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         account = new javax.swing.JMenu();
         menuAccount = new javax.swing.JMenuItem();
@@ -84,6 +85,14 @@ public class dashboardGiaoVu extends javax.swing.JFrame {
             }
         });
 
+        btnQuanLyHocPhan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuanLyHocPhan.setText("Quản lý học phần");
+        btnQuanLyHocPhan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuanLyHocPhanActionPerformed(evt);
+            }
+        });
+
         account.setText("Tài khoản");
 
         menuAccount.setText("Thông tin tài khoản");
@@ -119,19 +128,16 @@ public class dashboardGiaoVu extends javax.swing.JFrame {
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(btnQuanLyThoiGianDangKi))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(btnQuanLyMonHoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(btnDSGiaoVu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(63, 63, 63)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addComponent(btnQuanLyLopHoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(btnQuanLyHocKi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(btnQuanLyMonHoc, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnDSGiaoVu, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnQuanLyThoiGianDangKi))
+                                .addGap(63, 63, 63)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(btnQuanLyLopHoc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnQuanLyHocKi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnQuanLyHocPhan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -152,8 +158,10 @@ public class dashboardGiaoVu extends javax.swing.JFrame {
                                         .addComponent(btnQuanLyMonHoc)
                                         .addComponent(btnQuanLyLopHoc))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnQuanLyThoiGianDangKi)
-                                .addContainerGap(19, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnQuanLyHocPhan)
+                                        .addComponent(btnQuanLyThoiGianDangKi))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -187,11 +195,30 @@ public class dashboardGiaoVu extends javax.swing.JFrame {
     }
 
     private void btnQuanLyLopHocActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        JFrame frame = new QuanLyLopHoc();
+        frame.setTitle("Quản lý lớp học");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     private void btnQuanLyThoiGianDangKiActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        JFrame frame = new QuanLyThoiGianDangKi();
+        frame.setTitle("Quản lý thời gian đăng kí");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
+    private void btnQuanLyHocPhanActionPerformed(java.awt.event.ActionEvent evt) {
+        JFrame frame = new QuanLyHocPhan();
+        frame.setTitle("Quản lý học phần");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     private void menuAccountActionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,6 +282,7 @@ public class dashboardGiaoVu extends javax.swing.JFrame {
     private javax.swing.JMenu account;
     private javax.swing.JButton btnDSGiaoVu;
     private javax.swing.JButton btnQuanLyHocKi;
+    private javax.swing.JButton btnQuanLyHocPhan;
     private javax.swing.JButton btnQuanLyLopHoc;
     private javax.swing.JButton btnQuanLyMonHoc;
     private javax.swing.JButton btnQuanLyThoiGianDangKi;

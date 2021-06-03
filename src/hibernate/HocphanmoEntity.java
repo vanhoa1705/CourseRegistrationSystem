@@ -14,12 +14,29 @@ public class HocphanmoEntity {
     private String thu;
     private Integer ca;
     private Integer soLuong;
+    private Integer idHocKi;
 
     private MonhocEntity monhoc;
-    private ThoigiandkhpEntity thoigiandkhp;
+    private HockiEntity hocki;
 
     public Set<SinhvienHocphanEntity> getSinhvienHocphanSet() {
         return sinhvienHocphanSet;
+    }
+
+    public Integer getIdHocKi() {
+        return idHocKi;
+    }
+
+    public void setIdHocKi(Integer idHocKi) {
+        this.idHocKi = idHocKi;
+    }
+
+    public HockiEntity getHocki() {
+        return hocki;
+    }
+
+    public void setHocki(HockiEntity hocki) {
+        this.hocki = hocki;
     }
 
     public void setSinhvienHocphanSet(Set<SinhvienHocphanEntity> sinhvienHocphanSet) {
@@ -27,14 +44,6 @@ public class HocphanmoEntity {
     }
 
     private Set<SinhvienHocphanEntity> sinhvienHocphanSet = new HashSet<SinhvienHocphanEntity>(0);
-
-    public ThoigiandkhpEntity getThoigiandkhp() {
-        return thoigiandkhp;
-    }
-
-    public void setThoigiandkhp(ThoigiandkhpEntity thoigiandkhp) {
-        this.thoigiandkhp = thoigiandkhp;
-    }
 
     public MonhocEntity getMonhoc() {
         return monhoc;

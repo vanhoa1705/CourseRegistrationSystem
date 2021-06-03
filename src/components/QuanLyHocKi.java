@@ -156,7 +156,12 @@ public class QuanLyHocKi extends javax.swing.JFrame implements ActionListener {
     }
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        JFrame frame = new CreateHocKi();
+        frame.setTitle("Create semester");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     /**

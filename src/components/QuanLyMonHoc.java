@@ -212,7 +212,7 @@ public class QuanLyMonHoc extends javax.swing.JFrame  implements ActionListener 
 
     private void deleteCurrentRowRows() {
         int selectedRow = tableMonHoc.getSelectedRow();
-        int result = MonHocDAO.deleteMonHoc(monhoc.get(selectedRow).getId());
+        int result = MonHocDAO.deleteMonHoc(monhoc.get(selectedRow));
         if(result > 0){
             JOptionPane.showMessageDialog(null, "Xoa thanh cong");
             updateTable();

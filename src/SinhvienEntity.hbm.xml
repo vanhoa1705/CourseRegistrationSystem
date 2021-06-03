@@ -34,7 +34,7 @@
             <column name="idLop" not-null="true"/>
         </many-to-one>
 
-        <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
+        <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update, delete" inverse="true">
             <key column="idHocPhanMo" />
             <one-to-many class="hibernate.SinhvienHocphanEntity" />
         </set>

@@ -31,13 +31,14 @@
             <column name="idMonHoc" not-null="true"/>
         </many-to-one>
 
-        <many-to-one name="thoigiandkhp" class="hibernate.ThoigiandkhpEntity" fetch="join" lazy="false" cascade="save-update, delete">
-            <column name="idThoiGianDKHP" not-null="true"/>
+        <many-to-one name="hocki" class="hibernate.HockiEntity" fetch="join" lazy="false" cascade="save-update, delete">
+            <column name="idHocKi" not-null="true"/>
         </many-to-one>
 
-        <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update" inverse="true">
+        <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update, delete" inverse="true">
             <key column="idHocPhanMo" />
             <one-to-many class="hibernate.SinhvienHocphanEntity" />
         </set>
+
     </class>
 </hibernate-mapping>

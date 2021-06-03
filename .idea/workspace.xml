@@ -2,30 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54133223-3197-4a39-8f2b-ca72f9793a6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/HocPhanDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAO/LopHocDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CreateClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CreateHocKi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CreateTGDKHP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DanhSachSinhVien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuanLyLopHoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuanLyThoiGianDangKi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/16a81722-1f68-4be4-b9d0-24baa58aaa59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/16a81722-1f68-4be4-b9d0-24baa58aaa59.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/LoginFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/LoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/LoginFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/GiaoVuDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/GiaoVuDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/HocKiDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/HocKiDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/MonHocDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/MonHocDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/SinhVienDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/SinhVienDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/GiaovienEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/GiaovienEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/GiaovienMocHocEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/GiaovienMocHocEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/HockiEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/HockiEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/GiaovienMonHocEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/GiaovienMonHocEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/HocphanmoEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/HocphanmoEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/LophocEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/LophocEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/MonhocEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/MonhocEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/SinhvienEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/SinhvienEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/ThoigiandkhpEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/ThoigiandkhpEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/DanhSachGiaoVu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/DanhSachGiaoVu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocKi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocKi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyMonHoc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyMonHoc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/dashboardGiaoVu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/HockiEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/HockiEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/HocphanmoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/HocphanmoEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/ThoigiandkhpEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/ThoigiandkhpEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/GiaoVuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/GiaoVuDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/HocKiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/HocKiDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/MonHocDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/MonHocDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/SinhVienDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/SinhVienDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GiaovienEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GiaovienEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GiaovienMocHocEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GiaovienMocHocEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HockiEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/HockiEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HocphanmoEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/HocphanmoEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LophocEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/LophocEntity.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MonhocEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonhocEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SinhvienEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinhvienEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SinhvienHocphanEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinhvienHocphanEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ThoigiandkhpEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThoigiandkhpEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/GiaovienEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/GiaovienEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/GiaovienMonHocEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/GiaovienMonHocEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DanhSachGiaoVu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DanhSachGiaoVu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuanLyHocKi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuanLyHocKi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuanLyMonHoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuanLyMonHoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardGiaoVu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardGiaoVu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hibernate/HockiEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/HockiEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hibernate/HocphanmoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/HocphanmoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/LophocEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/LophocEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/MonhocEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/MonhocEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/SinhvienEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/SinhvienEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/SinhvienHocphanEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/SinhvienHocphanEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hibernate/ThoigiandkhpEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/ThoigiandkhpEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,9 +100,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1tJAT1R8ApFIwXIUlOtLrORHsat" />
   <component name="ProjectViewState">
@@ -139,13 +183,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +217,10 @@
       <workItem from="1622508530521" duration="4769000" />
       <workItem from="1622531557314" duration="24779000" />
       <workItem from="1622600966519" duration="1550000" />
-      <workItem from="1622620966477" duration="24963000" />
+      <workItem from="1622620966477" duration="28920000" />
+      <workItem from="1622656426299" duration="772000" />
+      <workItem from="1622691377777" duration="10416000" />
+      <workItem from="1622707622788" duration="19318000" />
     </task>
     <servers />
   </component>

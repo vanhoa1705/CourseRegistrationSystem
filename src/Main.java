@@ -1,5 +1,9 @@
+import DAO.HocKiDAO;
+import DAO.LopHocDAO;
 import DAO.SinhVienDAO;
+import components.Global;
 import components.Login;
+import hibernate.LophocEntity;
 import hibernate.SinhvienEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
@@ -17,6 +21,8 @@ import java.util.Map;
 public class Main {
 
     public static void main(final String[] args)  {
+        HocKiDAO.getCurrentHK();
+
         JFrame frame = new Login();
         frame.setTitle("Login");
         frame.setResizable(false);

@@ -237,7 +237,7 @@ public class DanhSachGiaoVu extends javax.swing.JFrame implements ActionListener
 
     private void deleteCurrentRowRows() {
         int selectedRow = tableGiaoVu.getSelectedRow();
-        int result = GiaoVuDAO.deleteGiaoVu(giaovu.get(selectedRow).getId());
+        int result = GiaoVuDAO.deleteGiaoVu(giaovu.get(selectedRow));
         if(result > 0){
             JOptionPane.showMessageDialog(null, "Xoa thanh cong");
             updateTable();

@@ -2,6 +2,7 @@ package DAO;
 
 import hibernate.GiaovienEntity;
 import hibernate.GiaovuEntity;
+import hibernate.HockiEntity;
 import hibernate.SinhvienEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -108,17 +109,15 @@ public class GiaoVuDAO {
         return 0;
     }
 
-    public static int deleteGiaoVu(int id){
+    public static int deleteGiaoVu(GiaovuEntity gv){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
         try {
-            final String hql = "delete from GiaovuEntity where id=:id";
-            Query query = session.createQuery(hql);
-            query.setParameter("id", id);
-            int result =query.executeUpdate();
+            session.delete(gv);
+
             transaction.commit();
-            return result;
+            return 1;
         }catch (HibernateException e){
             transaction.rollback();
             System.err.println(e);
@@ -159,6 +158,7 @@ public class GiaoVuDAO {
                 date = (Date) simpleDateFormat.parse(DOB);
             } catch (ParseException e) {
                 JOptionPane.showMessageDialog(null, "Định dạng ngày là yyy-MM-dd!");
+                return 0;
             }
 
             final String getMax = "select MAX(gv.maGiaoVu) from GiaovuEntity gv";

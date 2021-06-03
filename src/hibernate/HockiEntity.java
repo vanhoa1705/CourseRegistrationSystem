@@ -14,6 +14,15 @@ public class HockiEntity {
     private boolean isCurrent;
 
     private Set<ThoigiandkhpEntity> thoigiandkhpSet = new HashSet<ThoigiandkhpEntity>(0);
+    private Set<HocphanmoEntity> hocphanmoSet = new HashSet<HocphanmoEntity>(0);
+
+    public Set<HocphanmoEntity> getHocphanmoSet() {
+        return hocphanmoSet;
+    }
+
+    public void setHocphanmoSet(Set<HocphanmoEntity> hocphanmoSet) {
+        this.hocphanmoSet = hocphanmoSet;
+    }
 
     public Set<ThoigiandkhpEntity> getThoigiandkhpSet() {
         return thoigiandkhpSet;
@@ -25,6 +34,19 @@ public class HockiEntity {
 
     public boolean isCurrent() {
         return isCurrent;
+    }
+
+    @Override
+    public String toString() {
+        return "HockiEntity{" +
+                "id=" + id +
+                ", tenHocKi='" + tenHocKi + '\'' +
+                ", namHoc='" + namHoc + '\'' +
+                ", ngayBatDau=" + ngayBatDau +
+                ", ngayKetThuc=" + ngayKetThuc +
+                ", isCurrent=" + isCurrent +
+                ", thoigiandkhpSet=" + thoigiandkhpSet +
+                '}';
     }
 
     public void setCurrent(boolean current) {

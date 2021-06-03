@@ -24,11 +24,18 @@
             <column name="isCurrent" sql-type="tinyint(1)" not-null="true"/>
         </property>
 
-        <set name="thoigiandkhpSet">
+        <set name="thoigiandkhpSet" fetch="join" lazy="false" cascade="save-update, delete, persist" inverse="true">
             <key>
                 <column name="idKi"/>
             </key>
             <one-to-many class="hibernate.ThoigiandkhpEntity"/>
+        </set>
+
+        <set name="hocphanmoSet" fetch="join" lazy="false" cascade="save-update, delete, persist" inverse="true">
+            <key>
+                <column name="idHocKi"/>
+            </key>
+            <one-to-many class="hibernate.HocphanmoEntity"/>
         </set>
     </class>
 </hibernate-mapping>

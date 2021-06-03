@@ -1,13 +1,17 @@
 package DAO;
 
+import components.Global;
 import hibernate.HockiEntity;
 import hibernate.MonhocEntity;
+import hibernate.ThoigiandkhpEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import utils.HibernateUtil;
 
+import javax.swing.*;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -74,19 +78,21 @@ public class HocKiDAO {
         Transaction transaction = session.beginTransaction();
 
         try {
-            final String hql = "delete from HockiEntity where id=:id";
+            final String hql = "select hk from HockiEntity hk where id=:id";
             Query query = session.createQuery(hql);
             query.setParameter("id", id);
-            int result =query.executeUpdate();
+            List<HockiEntity> hocki = query.list();
+            session.delete(hocki.get(0));
+
             transaction.commit();
-            return result;
+            return 1;
         }catch (HibernateException e){
             transaction.rollback();
             System.err.println(e);
+            return 0;
         }finally {
             session.close();
         }
-        return 0;
     }
 
     public static int createHocKi(String name, String year, Date startDate, Date endDate){
@@ -110,4 +116,43 @@ public class HocKiDAO {
         }
         return 0;
     }
+
+    public static void getCurrentHK(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            final String update = "select hk from HockiEntity hk where isCurrent = true";
+            Query query = session.createQuery(update);
+            List<HockiEntity> temp = query.list();
+            Global.currentHocKy = temp.get(0);
+            return;
+        }catch (HibernateException e){
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return;
+    }
+
+    public static int createTGDK(Date startDate, Date endDate){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            ThoigiandkhpEntity temp = new ThoigiandkhpEntity();
+            temp.setHocKi(Global.currentHocKy);
+            temp.setNgayBatDau(new java.sql.Date(startDate.getTime()));
+            temp.setNgayKetThuc(new java.sql.Date(endDate.getTime()));
+            session.save(temp);
+
+            transaction.commit();
+            return 1;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return 0;
+    }
+
+
 }

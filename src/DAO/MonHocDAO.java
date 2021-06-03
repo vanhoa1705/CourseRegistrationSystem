@@ -1,6 +1,8 @@
 package DAO;
 
+import hibernate.GiaovienEntity;
 import hibernate.GiaovuEntity;
+import hibernate.HockiEntity;
 import hibernate.MonhocEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -73,17 +75,14 @@ public class MonHocDAO {
         return 0;
     }
 
-    public static int deleteMonHoc(int id){
+    public static int deleteMonHoc(MonhocEntity monhoc){
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
 
         try {
-            final String hql = "delete from MonhocEntity where id=:id";
-            Query query = session.createQuery(hql);
-            query.setParameter("id", id);
-            int result =query.executeUpdate();
+            session.delete(monhoc);
             transaction.commit();
-            return result;
+            return 1;
         }catch (HibernateException e){
             transaction.rollback();
             System.err.println(e);
@@ -112,5 +111,22 @@ public class MonHocDAO {
             session.close();
         }
         return 0;
+    }
+
+    public static String getTeacherByCode(String code){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        try {
+            final String hql = "select gv from GiaovienEntity gv where gv.maGiaoVien = :code";
+            Query query = session.createQuery(hql);
+            query.setParameter("code", code);
+            GiaovienEntity giaovien = (GiaovienEntity) query.list().get(0);
+            return giaovien != null ? giaovien.getTenGiaoVien(): null;
+        }catch (HibernateException e){
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return null;
     }
 }
