@@ -210,6 +210,7 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
     private void updateTable(){
         DefaultTableModel defaultTableModel = new DefaultTableModel();
         tableHocPhan.setModel(defaultTableModel);
+        defaultTableModel.addColumn("ID Môn");
         defaultTableModel.addColumn("Mã môn học");
         defaultTableModel.addColumn("Tên môn học");
         defaultTableModel.addColumn("Số TC");
@@ -220,9 +221,10 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
         defaultTableModel.addColumn("Slot");
 
         this.hocphan = Global.currentHocKy.getHocphanmoSet().stream().toList();
+        System.out.println(this.hocphan.get(0).toString());
 
         for(HocphanmoEntity hp: this.hocphan){
-            Object[] temp = new Object[]{hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()) , hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getSoLuong()};
+            Object[] temp = new Object[]{hp.getMonhoc().getId(), hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()) , hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getSoLuong()};
             defaultTableModel.addRow(temp);
         }
     }
@@ -239,6 +241,7 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
 
     private void deleteCurrentRow(){
         int selectedRow = tableHocPhan.getSelectedRow();
+        System.out.println(hocphan.get(selectedRow).toString());
         int result = HocPhanDAO.deleteHocPhan(hocphan.get(selectedRow));
         if(result > 0){
             JOptionPane.showMessageDialog(null, "Xoa thanh cong");

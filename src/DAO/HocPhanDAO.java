@@ -1,5 +1,6 @@
 package DAO;
 
+import components.Global;
 import hibernate.HockiEntity;
 import hibernate.HocphanmoEntity;
 import org.hibernate.HibernateException;
@@ -29,6 +30,21 @@ public class HocPhanDAO {
         }
     }
 
-//    public static int createHocPhan();
+    public static void getHPInCurrentHK(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            final String update = "select hp from HocphanmoEntity hp where hocki.id = :idKi";
+            Query query = session.createQuery(update);
+            query.setParameter("idKi", Global.currentHocKy.getId());
+            List<HockiEntity> temp = query.list();
+            Global.currentHocKy = temp.get(0);
+            return;
+        }catch (HibernateException e){
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return;
+    }
 
 }

@@ -2,6 +2,7 @@ package DAO;
 
 import components.Global;
 import hibernate.HockiEntity;
+import hibernate.HocphanmoEntity;
 import hibernate.MonhocEntity;
 import hibernate.ThoigiandkhpEntity;
 import org.hibernate.HibernateException;

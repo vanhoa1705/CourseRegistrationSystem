@@ -6,29 +6,18 @@ import java.util.Set;
 
 public class HocphanmoEntity {
     private int id;
-    private int idMonHoc;
-    private int idThoiGianDkhp;
     private String maGvlt;
     private String tenHocPhan;
     private String tenPhongHoc;
     private String thu;
     private Integer ca;
     private Integer soLuong;
-    private Integer idHocKi;
 
     private MonhocEntity monhoc;
     private HockiEntity hocki;
 
     public Set<SinhvienHocphanEntity> getSinhvienHocphanSet() {
         return sinhvienHocphanSet;
-    }
-
-    public Integer getIdHocKi() {
-        return idHocKi;
-    }
-
-    public void setIdHocKi(Integer idHocKi) {
-        this.idHocKi = idHocKi;
     }
 
     public HockiEntity getHocki() {
@@ -53,28 +42,28 @@ public class HocphanmoEntity {
         this.monhoc = monhoc;
     }
 
+    @Override
+    public String toString() {
+        return "HocphanmoEntity{" +
+                "id=" + id +
+                ", maGvlt='" + maGvlt + '\'' +
+                ", tenHocPhan='" + tenHocPhan + '\'' +
+                ", tenPhongHoc='" + tenPhongHoc + '\'' +
+                ", thu='" + thu + '\'' +
+                ", ca=" + ca +
+                ", soLuong=" + soLuong +
+                ", monhoc=" + monhoc +
+                ", hocki=" + hocki +
+                ", sinhvienHocphanSet=" + sinhvienHocphanSet +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getIdMonHoc() {
-        return idMonHoc;
-    }
-
-    public void setIdMonHoc(int idMonHoc) {
-        this.idMonHoc = idMonHoc;
-    }
-
-    public int getIdThoiGianDkhp() {
-        return idThoiGianDkhp;
-    }
-
-    public void setIdThoiGianDkhp(int idThoiGianDkhp) {
-        this.idThoiGianDkhp = idThoiGianDkhp;
     }
 
     public String getMaGvlt() {
@@ -123,18 +112,5 @@ public class HocphanmoEntity {
 
     public void setSoLuong(Integer soLuong) {
         this.soLuong = soLuong;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        HocphanmoEntity that = (HocphanmoEntity) o;
-        return id == that.id && idMonHoc == that.idMonHoc && idThoiGianDkhp == that.idThoiGianDkhp && Objects.equals(maGvlt, that.maGvlt) && Objects.equals(tenHocPhan, that.tenHocPhan) && Objects.equals(tenPhongHoc, that.tenPhongHoc) && Objects.equals(thu, that.thu) && Objects.equals(ca, that.ca) && Objects.equals(soLuong, that.soLuong);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, idMonHoc, idThoiGianDkhp, maGvlt, tenHocPhan, tenPhongHoc, thu, ca, soLuong);
     }
 }

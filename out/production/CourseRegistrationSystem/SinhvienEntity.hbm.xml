@@ -35,7 +35,7 @@
         </many-to-one>
 
         <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update, delete" inverse="true">
-            <key column="idHocPhanMo" />
+            <key column="idHocPhanMo" not-null="true"/>
             <one-to-many class="hibernate.SinhvienHocphanEntity" />
         </set>
     </class>

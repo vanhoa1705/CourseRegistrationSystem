@@ -129,4 +129,21 @@ public class MonHocDAO {
         }
         return null;
     }
+
+    public static MonhocEntity getSubjectByCode(String code){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        try {
+            final String hql = "select mh from MonhocEntity mh where mh.maMonHoc = :code";
+            Query query = session.createQuery(hql);
+            query.setParameter("code", code);
+            MonhocEntity monhoc = (MonhocEntity) query.list().get(0);
+            return monhoc;
+        }catch (HibernateException e){
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return null;
+    }
 }

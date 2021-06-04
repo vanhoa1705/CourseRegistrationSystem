@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
     <class name="hibernate.HocphanmoEntity" table="hocphanmo" schema="dangkihocphan">
@@ -27,18 +27,27 @@
             <column name="soLuong" sql-type="int" not-null="true"/>
         </property>
 
-        <many-to-one name="monhoc" class="hibernate.MonhocEntity" fetch="join" lazy="false" cascade="save-update, delete">
-            <column name="idMonHoc" not-null="true"/>
-        </many-to-one>
+<!--        <property name="idHocKi">-->
+<!--            <column name="idHocKi" sql-type="int" not-null="true"/>-->
+<!--        </property>-->
 
-        <many-to-one name="hocki" class="hibernate.HockiEntity" fetch="join" lazy="false" cascade="save-update, delete">
+<!--        <property name="idMonHoc">-->
+<!--            <column name="idMonHoc" sql-type="int" not-null="true"/>-->
+<!--        </property>-->
+
+        <many-to-one name="hocki" class="hibernate.HockiEntity" cascade="save-update">
             <column name="idHocKi" not-null="true"/>
         </many-to-one>
 
-        <set name="sinhvienHocphanSet" fetch="join" lazy="false" cascade="save-update, delete" inverse="true">
-            <key column="idHocPhanMo" />
-            <one-to-many class="hibernate.SinhvienHocphanEntity" />
-        </set>
+        <many-to-one name="monhoc" class="hibernate.MonhocEntity" fetch="join" lazy="false" cascade="save-update">
+            <column name="idMonHoc" not-null="true"/>
+        </many-to-one>
 
+        <set name="sinhvienHocphanSet" inverse="true" table="sinhvien_hocphan" fetch="join" lazy="false" cascade="save-update,delete">
+            <key>
+                <column name="idHocPhanMo" not-null="true"/>
+            </key>
+            <one-to-many class="hibernate.SinhvienHocphanEntity"/>
+        </set>
     </class>
 </hibernate-mapping>
