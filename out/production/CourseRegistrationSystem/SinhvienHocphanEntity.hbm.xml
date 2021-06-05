@@ -9,7 +9,7 @@
             <column name="id" sql-type="int"/>
         </id>
         <property name="ngayDangKi">
-            <column name="ngayDangKi" sql-type="date" not-null="true"/>
+            <column name="ngayDangKi" sql-type="date" not-null="false"/>
         </property>
 
         <many-to-one name="sinhvien" class="hibernate.SinhvienEntity" fetch="join" lazy="false" cascade="save-update, delete">

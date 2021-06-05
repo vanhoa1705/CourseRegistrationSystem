@@ -83,4 +83,57 @@ public class HocPhanDAO {
         return null;
     }
 
+    public static int dangKiHocPhan(HocphanmoEntity hocphan){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            SinhvienHocphanEntity temp = new SinhvienHocphanEntity();
+            temp.setHocphanmo(hocphan);
+            temp.setSinhvien(Global.sinhvien);
+            session.merge(temp);
+
+            final String hql = "update HocphanmoEntity set daDangKi = :daDangKi where id=:id";
+            Query query = session.createQuery(hql);
+            query.setParameter("id", hocphan.getId());
+            query.setParameter("daDangKi", hocphan.getDaDangKi() + 1);
+            query.executeUpdate();
+
+            transaction.commit();
+            return 1;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return 0;
+    }
+
+    public static int huyDangKi(SinhvienHocphanEntity svhp){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        try {
+            String hql = "delete from SinhvienHocphanEntity where id = :id";
+            Query query = session.createQuery(hql);
+            query.setParameter("id", svhp.getId());
+            query.executeUpdate();
+
+            String update = "update HocphanmoEntity set daDangKi = :daDangKi where id=:id";
+            query = session.createQuery(update);
+            query.setParameter("id", svhp.getHocphanmo().getId());
+            query.setParameter("daDangKi", svhp.getHocphanmo().getDaDangKi() - 1);
+            query.executeUpdate();
+
+            transaction.commit();
+            return 1;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+            return 0;
+        }finally {
+            session.close();
+        }
+    }
+
 }

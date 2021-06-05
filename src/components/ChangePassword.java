@@ -1,6 +1,7 @@
 package components;
 
 import DAO.GiaoVuDAO;
+import DAO.SinhVienDAO;
 
 import javax.swing.*;
 
@@ -107,8 +108,6 @@ public class ChangePassword extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {
         if(Global.isGiaoVu){
-            System.out.println(Global.giaovu.getMatKhau());
-            System.out.println(String.valueOf(txtPassword.getPassword()));
             if(!Global.giaovu.getMatKhau().equals(String.valueOf(txtPassword.getPassword()))){
                 JOptionPane.showMessageDialog(null, "Mật khẩu không chính xác!");
                 return;
@@ -123,6 +122,24 @@ public class ChangePassword extends javax.swing.JFrame {
             if(result > 0 ){
                 JOptionPane.showMessageDialog(null, "Thay đổi mật khẩu thành công!");
                 Global.giaovu.setMatKhau(String.valueOf(txtNewPassword.getPassword()));
+            }else {
+                JOptionPane.showMessageDialog(null, "Thay đổi mật khẩu không thành công!");
+            }
+        }else {
+            if(!Global.sinhvien.getMatKhau().equals(String.valueOf(txtPassword.getPassword()))){
+                JOptionPane.showMessageDialog(null, "Mật khẩu không chính xác!");
+                return;
+            }
+
+            if(!String.valueOf(txtNewPassword.getPassword()).equals(String.valueOf(txtRePassword.getPassword()))){
+                JOptionPane.showMessageDialog(null, "Mật khẩu mới không khớp!");
+                return;
+            }
+
+            int result = SinhVienDAO.ChangePassword(Global.sinhvien.getId(), txtNewPassword.getText());
+            if(result > 0 ){
+                JOptionPane.showMessageDialog(null, "Thay đổi mật khẩu thành công!");
+                Global.sinhvien.setMatKhau(String.valueOf(txtNewPassword.getPassword()));
             }else {
                 JOptionPane.showMessageDialog(null, "Thay đổi mật khẩu không thành công!");
             }

@@ -1358,6 +1358,8 @@ maSinhVien</ColNames>
     <column id="375" parent="294" name="ngayDangKi">
       <Position>4</Position>
       <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>(cast(now() as date))</DefaultExpression>
     </column>
     <index id="376" parent="294" name="FK_SV_HP">
       <ColNames>idSinhVien</ColNames>

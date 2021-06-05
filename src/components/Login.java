@@ -6,6 +6,7 @@ package components;
  */
 
 import DAO.GiaoVuDAO;
+import DAO.HocKiDAO;
 import DAO.SinhVienDAO;
 import hibernate.GiaovuEntity;
 import hibernate.SinhvienEntity;
@@ -110,12 +111,26 @@ public class Login extends javax.swing.JFrame {
         String password = txtPassword.getText();
         SinhvienEntity isLoginSV = SinhVienDAO.Login(username, password);
         GiaovuEntity isLoginGV = GiaoVuDAO.Login(username, password);
+        HocKiDAO.setCurrentHK(Global.currentHocKy.getId());
 
         if(isLoginGV != null){
             dispose();
             Global.isGiaoVu = true;
             Global.giaovu = isLoginGV;
+            Global.sinhvien = null;
             JFrame frame = new dashboardGiaoVu();
+            frame.setTitle("Danh sách chức năng");
+            frame.setResizable(false);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        }
+        if(isLoginSV != null){
+            dispose();
+            Global.isGiaoVu = false;
+            Global.sinhvien = isLoginSV;
+            Global.giaovu = null;
+            JFrame frame = new dashboardSinhVien();
             frame.setTitle("Danh sách chức năng");
             frame.setResizable(false);
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

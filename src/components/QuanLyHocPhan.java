@@ -243,7 +243,6 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
 
     private void deleteCurrentRow(){
         int selectedRow = tableHocPhan.getSelectedRow();
-        System.out.println(hocphan.get(selectedRow).toString());
         int result = HocPhanDAO.deleteHocPhan(hocphan.get(selectedRow));
         if(result > 0){
             JOptionPane.showMessageDialog(null, "Xoa thanh cong");

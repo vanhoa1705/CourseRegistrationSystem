@@ -52,22 +52,6 @@ public class HocphanmoEntity {
         this.monhoc = monhoc;
     }
 
-    @Override
-    public String toString() {
-        return "HocphanmoEntity{" +
-                "id=" + id +
-                ", maGvlt='" + maGvlt + '\'' +
-                ", tenHocPhan='" + tenHocPhan + '\'' +
-                ", tenPhongHoc='" + tenPhongHoc + '\'' +
-                ", thu='" + thu + '\'' +
-                ", ca=" + ca +
-                ", soLuong=" + soLuong +
-                ", monhoc=" + monhoc +
-                ", hocki=" + hocki +
-                ", sinhvienHocphanSet=" + sinhvienHocphanSet +
-                '}';
-    }
-
     public int getId() {
         return id;
     }
