@@ -1,6 +1,7 @@
 package components;
 
 import DAO.GiaoVuDAO;
+import DAO.SinhVienDAO;
 
 import javax.swing.*;
 import java.sql.Date;
@@ -150,7 +151,7 @@ public class ChangeProfile extends javax.swing.JFrame {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {
         if(isGiaoVu){
             int result = GiaoVuDAO.updateGiaoVu(id, txtName.getText(), gender.getSelectedItem().toString(), txtDOB.getText(), txtAddress.getText());
-            if(Global.isGiaoVu && this.id == Global.giaovu.getId()){
+            if(Global.giaovu != null && this.id == Global.giaovu.getId()){
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 Date date = null;
                 try {
@@ -163,6 +164,29 @@ public class ChangeProfile extends javax.swing.JFrame {
                 Global.giaovu.setGioiTinh(gender.getSelectedItem().toString());
                 Global.giaovu.setNgaySinh(date);
                 Global.giaovu.setDiaChi(txtAddress.getText());
+            }
+            if(result > 0){
+                JOptionPane.showMessageDialog(null, "Cap nhat thanh cong");
+                dispose();
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Cap nhat khong thanh cong");
+            }
+        }else{
+            int result = SinhVienDAO.updateSinhVien(id, txtName.getText(), gender.getSelectedItem().toString(), txtDOB.getText(), txtAddress.getText());
+            if(Global.sinhvien != null && this.id == Global.sinhvien.getId()){
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Date date = null;
+                try {
+                    date = new Date (sdf.parse(txtDOB.getText()).getTime()) ;
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                Global.sinhvien.setTenSinhVien(txtName.getText());
+                Global.sinhvien.setGioiTinh(gender.getSelectedItem().toString());
+                Global.sinhvien.setNgaySinh(date);
+                Global.sinhvien.setDiaChi(txtAddress.getText());
             }
             if(result > 0){
                 JOptionPane.showMessageDialog(null, "Cap nhat thanh cong");

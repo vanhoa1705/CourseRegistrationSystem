@@ -1,14 +1,14 @@
 package DAO;
 
 import components.Global;
-import hibernate.HockiEntity;
-import hibernate.HocphanmoEntity;
+import hibernate.*;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import utils.HibernateUtil;
 
+import javax.swing.*;
 import java.util.List;
 
 public class HocPhanDAO {
@@ -30,21 +30,57 @@ public class HocPhanDAO {
         }
     }
 
-    public static void getHPInCurrentHK(){
+    public static int createHocPhan(String subjectCode, String teacherCode, String room, String day, int time, int slot){
+        MonhocEntity monhoc = MonHocDAO.getSubjectByCode(subjectCode);
+        GiaovienEntity giaovien = GiaoVienDAO.getTeacherByCode(teacherCode);
+        if(monhoc == null){
+            JOptionPane.showMessageDialog(null, "Mã môn học không tồn tại!");
+            return 0;
+        }
+        if(giaovien == null){
+            JOptionPane.showMessageDialog(null, "Mã giáo viên không tồn tại!");
+            return 0;
+        }
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            HocphanmoEntity temp = new HocphanmoEntity();
+            temp.setMonhoc(monhoc);
+            temp.setMaGvlt(giaovien.getMaGiaoVien());
+            temp.setTenHocPhan(monhoc.getTenMonHoc());
+            temp.setTenPhongHoc(room);
+            temp.setThu(day);
+            temp.setCa(time);
+            temp.setSoLuong(slot);
+            temp.setHocki(Global.currentHocKy);
+            session.merge(temp);
+
+            transaction.commit();
+            return 1;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return 0;
+    }
+
+    public static List<SinhvienHocphanEntity> getHocPhanBySV(SinhvienEntity sv){
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
-            final String update = "select hp from HocphanmoEntity hp where hocki.id = :idKi";
-            Query query = session.createQuery(update);
-            query.setParameter("idKi", Global.currentHocKy.getId());
-            List<HockiEntity> temp = query.list();
-            Global.currentHocKy = temp.get(0);
-            return;
+            final String hql = "select svhp from SinhvienHocphanEntity svhp where svhp.sinhvien = :sv";
+            Query query = session.createQuery(hql);
+            query.setParameter("sv", sv);
+            List<SinhvienHocphanEntity> svhp = query.list();
+            return svhp;
         }catch (HibernateException e){
             System.err.println(e);
         }finally {
             session.close();
         }
-        return;
+        return null;
     }
 
 }

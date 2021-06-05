@@ -25,7 +25,7 @@ public class QuanLyLopHoc extends javax.swing.JFrame implements ActionListener {
 
         //add popup menu
         popupMenu = new JPopupMenu();
-        menuItemView = new JMenuItem("view");
+        menuItemView = new JMenuItem("View");
         menuItemDelete = new JMenuItem("Delete");
 
         menuItemView.addActionListener(this);
@@ -151,7 +151,12 @@ public class QuanLyLopHoc extends javax.swing.JFrame implements ActionListener {
 
     private void viewCurrentRowRows() {
         int selectedRow = tableLopHoc.getSelectedRow();
-        System.out.println(lophoc.get(selectedRow));
+        JFrame frame = new DanhSachSinhVienLH(lophoc.get(selectedRow));
+        frame.setTitle("Danh sách sinh viên");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     private void deleteCurrentRowRows() {

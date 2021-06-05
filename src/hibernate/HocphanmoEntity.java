@@ -12,6 +12,8 @@ public class HocphanmoEntity {
     private String thu;
     private Integer ca;
     private Integer soLuong;
+    private Integer daDangKi;
+
 
     private MonhocEntity monhoc;
     private HockiEntity hocki;
@@ -30,6 +32,14 @@ public class HocphanmoEntity {
 
     public void setSinhvienHocphanSet(Set<SinhvienHocphanEntity> sinhvienHocphanSet) {
         this.sinhvienHocphanSet = sinhvienHocphanSet;
+    }
+
+    public Integer getDaDangKi() {
+        return daDangKi;
+    }
+
+    public void setDaDangKi(Integer daDangKi) {
+        this.daDangKi = daDangKi;
     }
 
     private Set<SinhvienHocphanEntity> sinhvienHocphanSet = new HashSet<SinhvienHocphanEntity>(0);

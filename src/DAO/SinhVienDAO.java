@@ -1,12 +1,20 @@
 package DAO;
 
+import hibernate.GiaovuEntity;
+import hibernate.LophocEntity;
 import hibernate.SinhvienEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import utils.HibernateUtil;
 
+import javax.swing.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class SinhVienDAO {
@@ -19,6 +27,28 @@ public class SinhVienDAO {
         try {
             final String hql = "select sv from SinhvienEntity sv";
             Query query = session.createQuery(hql);
+
+            sinhvien = query.list();
+
+        }catch (HibernateException e){
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+
+        return sinhvien;
+    }
+
+    public static List<SinhvienEntity> getStudentByClass(LophocEntity lophoc, String keyword) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+
+        List<SinhvienEntity> sinhvien = null;
+
+        try {
+            final String hql = "select sv from SinhvienEntity sv where lophoc = :lophoc and (tenSinhVien like :keyword or maSinhVien like :keyword)";
+            Query query = session.createQuery(hql);
+            query.setParameter("lophoc", lophoc);
+            query.setParameter("keyword", "%" + keyword + "%");
 
             sinhvien = query.list();
 
@@ -88,5 +118,59 @@ public class SinhVienDAO {
         }
 
         return null;
+    }
+
+    public static int ChangePassword(int id, String password){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        try {
+            final String hql = "update SinhvienEntity set matKhau =:password where id=:id";
+            Query query = session.createQuery(hql);
+            query.setParameter("id", id);
+            query.setParameter("password", password);
+            int result =query.executeUpdate();
+            transaction.commit();
+            return result;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return 0;
+    }
+
+    public static int updateSinhVien(int id, String name, String gender, String DOB, String address){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            final String hql = "update SinhvienEntity set tenSinhVien =:name, gioiTinh =:gender, ngaySinh = :DOB, diaChi = :address where id=:id";
+            Query query = session.createQuery(hql);
+
+            DateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+            Date date = null;
+            try {
+                date = (Date) simpleDateFormat.parse(DOB);
+            } catch (ParseException e) {
+                JOptionPane.showMessageDialog(null, "Định dạng ngày là yyy-MM-dd!");
+            }
+
+            query.setParameter("id", id);
+            query.setParameter("name", name);
+            query.setParameter("gender", gender);
+            query.setParameter("DOB", date);
+            query.setParameter("address", address);
+
+            int result = query.executeUpdate();
+            transaction.commit();
+            return result;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return 0;
     }
 }

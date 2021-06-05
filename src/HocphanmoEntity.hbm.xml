@@ -26,14 +26,9 @@
         <property name="soLuong">
             <column name="soLuong" sql-type="int" not-null="true"/>
         </property>
-
-<!--        <property name="idHocKi">-->
-<!--            <column name="idHocKi" sql-type="int" not-null="true"/>-->
-<!--        </property>-->
-
-<!--        <property name="idMonHoc">-->
-<!--            <column name="idMonHoc" sql-type="int" not-null="true"/>-->
-<!--        </property>-->
+        <property name="daDangKi">
+            <column name="daDangKi" sql-type="int" not-null="true"/>
+        </property>
 
         <many-to-one name="hocki" class="hibernate.HockiEntity" cascade="save-update">
             <column name="idHocKi" not-null="true"/>

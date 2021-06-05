@@ -41,4 +41,14 @@ public class SinhvienHocphanEntity {
     public void setNgayDangKi(Date ngayDangKi) {
         this.ngayDangKi = ngayDangKi;
     }
+
+    @Override
+    public String toString() {
+        return "SinhvienHocphanEntity{" +
+                "id=" + id +
+                ", ngayDangKi=" + ngayDangKi +
+                ", hocphanmo=" + hocphanmo +
+                ", sinhvien=" + sinhvien +
+                '}';
+    }
 }

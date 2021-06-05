@@ -167,7 +167,7 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
 
         for(HocphanmoEntity hp: Global.currentHocKy.getHocphanmoSet()){
             if(hp.getTenHocPhan().toUpperCase().contains(txtSearch.getText().toUpperCase())){
-                Object[] temp = new Object[]{hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()),  hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getSoLuong()};
+                Object[] temp = new Object[]{hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()),  hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getDaDangKi() + "/" + hp.getSoLuong()};
                 defaultTableModel.addRow(temp);
                 hocphan.add(hp);
             }
@@ -175,7 +175,12 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
     }
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        JFrame frame = new CreateHocPhan();
+        frame.setTitle("Thêm học phần");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     /**
@@ -210,7 +215,6 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
     private void updateTable(){
         DefaultTableModel defaultTableModel = new DefaultTableModel();
         tableHocPhan.setModel(defaultTableModel);
-        defaultTableModel.addColumn("ID Môn");
         defaultTableModel.addColumn("Mã môn học");
         defaultTableModel.addColumn("Tên môn học");
         defaultTableModel.addColumn("Số TC");
@@ -221,10 +225,8 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
         defaultTableModel.addColumn("Slot");
 
         this.hocphan = Global.currentHocKy.getHocphanmoSet().stream().toList();
-        System.out.println(this.hocphan.get(0).toString());
-
         for(HocphanmoEntity hp: this.hocphan){
-            Object[] temp = new Object[]{hp.getMonhoc().getId(), hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()) , hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getSoLuong()};
+            Object[] temp = new Object[]{hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()) , hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getSoLuong()};
             defaultTableModel.addRow(temp);
         }
     }

@@ -68,6 +68,7 @@ public class GiaoVuDAO {
             Query query = session.createQuery(hql);
             query.setParameter("keyword", "%" + keyword + "%");
             giaovu = query.list();
+
         }catch (HibernateException e){
             System.err.println(e);
         }finally {
