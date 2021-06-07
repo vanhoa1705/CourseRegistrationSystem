@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54133223-3197-4a39-8f2b-ca72f9793a6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CreateAccountSV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/CreateAccountGV$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/CreateAccountGV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/CreateAccountGV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/HocPhanDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/HocPhanDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/SinhVienDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/SinhVienDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateAccountGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateAccountGV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DanhSachSinhVienLH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DanhSachSinhVienLH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboardSinhVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardSinhVien.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +155,7 @@
       <workItem from="1622820803186" duration="10222000" />
       <workItem from="1622860166870" duration="18350000" />
       <workItem from="1623050183605" duration="809000" />
-      <workItem from="1623069795157" duration="5159000" />
+      <workItem from="1623069795157" duration="6402000" />
     </task>
     <servers />
   </component>
