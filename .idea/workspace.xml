@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CourseRegistrationSystem:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="54133223-3197-4a39-8f2b-ca72f9793a6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +40,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/DAO/HocPhanDAO.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/hibernate/HocphanmoEntity.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/QuanLyHocPhan.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Login.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1tJAT1R8ApFIwXIUlOtLrORHsat" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,8 +64,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1712448/CourseRegistrationSystem" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15716273" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -114,17 +129,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -155,7 +159,10 @@
       <workItem from="1622820803186" duration="10222000" />
       <workItem from="1622860166870" duration="18350000" />
       <workItem from="1623050183605" duration="809000" />
-      <workItem from="1623069795157" duration="6402000" />
+      <workItem from="1623069795157" duration="7008000" />
+      <workItem from="1623078445713" duration="19000" />
+      <workItem from="1623078480045" duration="1000" />
+      <workItem from="1623078668213" duration="68000" />
     </task>
     <servers />
   </component>
