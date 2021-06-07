@@ -152,6 +152,8 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
     }
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {
+        HocKiDAO.getCurrentHK();
+
         DefaultTableModel defaultTableModel = new DefaultTableModel();
         tableHocPhan.setModel(defaultTableModel);
         defaultTableModel.addColumn("Mã môn học");
@@ -226,7 +228,7 @@ public class QuanLyHocPhan extends javax.swing.JFrame implements ActionListener 
 
         this.hocphan = Global.currentHocKy.getHocphanmoSet().stream().toList();
         for(HocphanmoEntity hp: this.hocphan){
-            Object[] temp = new Object[]{hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()) , hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getSoLuong()};
+            Object[] temp = new Object[]{hp.getMonhoc().getMaMonHoc(), hp.getTenHocPhan(), hp.getMonhoc().getSoTinChi(), MonHocDAO.getTeacherByCode(hp.getMaGvlt()) , hp.getTenPhongHoc(), hp.getThu(), hp.getCa(), hp.getDaDangKi()+"/"+hp.getSoLuong()};
             defaultTableModel.addRow(temp);
         }
     }

@@ -107,6 +107,8 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {
+        HocKiDAO.getCurrentHK();
+
         String username = txtUsername.getText();
         String password = txtPassword.getText();
         SinhvienEntity isLoginSV = SinhVienDAO.Login(username, password);

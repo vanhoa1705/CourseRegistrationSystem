@@ -9,6 +9,7 @@ import org.hibernate.query.Query;
 import utils.HibernateUtil;
 
 import javax.swing.*;
+import java.sql.Date;
 import java.util.List;
 
 public class HocPhanDAO {
@@ -53,6 +54,7 @@ public class HocPhanDAO {
             temp.setThu(day);
             temp.setCa(time);
             temp.setSoLuong(slot);
+            temp.setDaDangKi(0);
             temp.setHocki(Global.currentHocKy);
             session.merge(temp);
 
@@ -90,6 +92,7 @@ public class HocPhanDAO {
             SinhvienHocphanEntity temp = new SinhvienHocphanEntity();
             temp.setHocphanmo(hocphan);
             temp.setSinhvien(Global.sinhvien);
+            temp.setNgayDangKi(new Date(System.currentTimeMillis()));
             session.merge(temp);
 
             final String hql = "update HocphanmoEntity set daDangKi = :daDangKi where id=:id";

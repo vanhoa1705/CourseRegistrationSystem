@@ -153,6 +153,7 @@ public class dashboardSinhVien extends javax.swing.JFrame {
     }
 
     private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {
+        HocKiDAO.getCurrentHK();
         dispose();
         JFrame frame = new Login();
         frame.setTitle("Login");

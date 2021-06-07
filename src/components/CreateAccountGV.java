@@ -55,11 +55,6 @@ public class CreateAccountGV extends javax.swing.JFrame {
         jLabel5.setText("Giới tính:");
 
         gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ" }));
-        gender.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genderActionPerformed(evt);
-            }
-        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Ngày sinh:");
@@ -131,10 +126,6 @@ public class CreateAccountGV extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(null, "Them khong thanh cong");
         }
-    }
-
-    private void genderActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
     }
 
     /**

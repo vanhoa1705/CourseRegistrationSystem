@@ -213,7 +213,12 @@ public class DanhSachSinhVienLH extends javax.swing.JFrame implements ActionList
 
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        JFrame frame = new CreateAccountSV(this.lophoc);
+        frame.setTitle("Thêm học sinh");
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {

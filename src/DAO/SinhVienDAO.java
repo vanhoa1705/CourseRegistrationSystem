@@ -61,6 +61,47 @@ public class SinhVienDAO {
         return sinhvien;
     }
 
+    public static int createSinhVien(String name, String gender, String DOB, String address, LophocEntity lophoc){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        try {
+            DateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+            Date date = null;
+            try {
+                date = (Date) simpleDateFormat.parse(DOB);
+            } catch (ParseException e) {
+                JOptionPane.showMessageDialog(null, "Định dạng ngày là yyy-MM-dd!");
+                return 0;
+            }
+
+            final String getMax = "select MAX(sv.maSinhVien) from SinhvienEntity sv";
+            Query query = session.createQuery(getMax);
+            List<String> t = query.list();
+            String maSinhVien = String.valueOf(Integer.parseInt(t.get(0))  + 1);
+
+            SinhvienEntity temp = new SinhvienEntity();
+            temp.setTenSinhVien(name);
+            temp.setGioiTinh(gender);
+            temp.setNgaySinh(new java.sql.Date(date.getTime()));
+            temp.setDiaChi(address);
+
+            temp.setMaSinhVien(maSinhVien);
+            temp.setTaiKhoan(maSinhVien);
+            temp.setMatKhau(maSinhVien);
+            temp.setLophoc(lophoc);
+            session.save(temp);
+
+            transaction.commit();
+            return 1;
+        }catch (HibernateException e){
+            transaction.rollback();
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return 0;
+    }
+
     public static SinhvienEntity Login(String username, String password){
         Session session = HibernateUtil.getSessionFactory().openSession();
         List<SinhvienEntity> sinhvien = null;
