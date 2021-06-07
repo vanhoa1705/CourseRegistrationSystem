@@ -12,6 +12,7 @@ import org.hibernate.query.Query;
 import utils.HibernateUtil;
 
 import javax.swing.*;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -153,6 +154,26 @@ public class HocKiDAO {
             session.close();
         }
         return 0;
+    }
+
+    public static boolean isInTimeDKHP(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            final String hql = "select tg from ThoigiandkhpEntity tg where tg.ngayBatDau <= CURRENT_DATE() and CURRENT_DATE() <= tg.ngayKetThuc and tg.hocKi = :hocki";
+            Query query = session.createQuery(hql);
+            query.setParameter("hocki", Global.currentHocKy);
+            List<ThoigiandkhpEntity> temp = query.list();
+            if(temp.size() > 0) {
+                return true;
+            }else {
+                return false;
+            }
+        }catch (HibernateException e){
+            System.err.println(e);
+        }finally {
+            session.close();
+        }
+        return false;
     }
 
 

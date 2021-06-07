@@ -24,11 +24,6 @@ public class Main {
     public static void main(final String[] args)  {
         HocKiDAO.getCurrentHK();
 
-        for (HocphanmoEntity hp: Global.currentHocKy.getHocphanmoSet()){
-            System.out.println(hp.toString());
-            break;
-        }
-
         JFrame frame = new Login();
         frame.setTitle("Login");
         frame.setResizable(false);

@@ -1,5 +1,7 @@
 package components;
 
+import DAO.HocKiDAO;
+
 import javax.swing.*;
 
 public class dashboardSinhVien extends javax.swing.JFrame {
@@ -111,12 +113,16 @@ public class dashboardSinhVien extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void btnDKHPActionPerformed(java.awt.event.ActionEvent evt) {
-        JFrame frame = new DangKiHocPhan();
-        frame.setTitle("Đăng kí học phần");
-        frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        if(HocKiDAO.isInTimeDKHP()) {
+            JFrame frame = new DangKiHocPhan();
+            frame.setTitle("Đăng kí học phần");
+            frame.setResizable(false);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        }else {
+            JOptionPane.showMessageDialog(null, "Hiện tại không trong thời gian đăng kí học phần");
+        }
     }
 
     private void btnDanhSachHocPhanDaDangKiActionPerformed(java.awt.event.ActionEvent evt) {

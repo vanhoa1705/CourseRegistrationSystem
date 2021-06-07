@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54133223-3197-4a39-8f2b-ca72f9793a6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/DangKiHocPhan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DanhSachHocPhanDaDangKi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboardSinhVien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/16a81722-1f68-4be4-b9d0-24baa58aaa59.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/16a81722-1f68-4be4-b9d0-24baa58aaa59.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien.form" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/build/classes/courseregistrationsystem/dashboardSinhVien.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/dashboardSinhVien.form" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/dashboardSinhVien.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/dashboardSinhVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/src/courseregistrationsystem/dashboardSinhVien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/HocPhanDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/DAO/HocPhanDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/ChangePassword$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/ChangePassword$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/ChangePassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/ChangePassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/components/QuanLyHocPhan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/HocphanmoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseRegistrationSystem/hibernate/HocphanmoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/HocPhanDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/HocPhanDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SinhvienHocphanEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/SinhvienHocphanEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ChangePassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuanLyHocPhan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate/HocphanmoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate/HocphanmoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseRegistrationSystem/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseRegistrationSystem/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/HocKiDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/HocKiDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboardSinhVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboardSinhVien.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,19 +116,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -176,6 +145,7 @@
       <workItem from="1622797021034" duration="521000" />
       <workItem from="1622820803186" duration="10222000" />
       <workItem from="1622860166870" duration="18350000" />
+      <workItem from="1623050183605" duration="809000" />
     </task>
     <servers />
   </component>
